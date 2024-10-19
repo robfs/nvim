@@ -51,6 +51,6 @@ vim.keymap.set('n', '<leader>gs', neogit.open, { desc = 'Open [G]it [S]tatus' })
 vim.keymap.set('n', '<leader>gc', ':Neogit commit<CR>', { desc = '[G]it [C]ommit' })
 vim.keymap.set('n', '<leader>gp', ':Neogit pull<CR>', { desc = '[G]it [p]ull' })
 vim.keymap.set('n', '<leader>gP', ':Neogit push<CR>', { desc = '[G]it [P]ush' })
-vim.keymap.set('n', '<leader>gb', ':Telescope git_brances<CR>', { desc = '[G]it [b]ranches' })
+vim.keymap.set('n', '<leader>gb', ':Telescope git_branches<CR>', { desc = '[G]it [b]ranches' })
 vim.keymap.set('n', '<leader>gB', neogit.open, { desc = '[G]it [B]lame' })
 -- vim: ts=2 sts=2 sw=2 et
