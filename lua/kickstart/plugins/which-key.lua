@@ -65,6 +65,7 @@ return {
         { '<leader>t', group = '[T]oggle/[T]est' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { '<leader>g', group = '[G]it' },
+        { '<leader>f', group = '[F]ind / [F]ormat' },
         { '<leader>tN', group = '[N]eotest' },
       },
     },
