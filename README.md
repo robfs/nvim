@@ -1,3 +1,83 @@
+# VS Code to Neovim
+
+## What is it?
+
+This is just my personal neovim setup but in case you have found it and think it might be useful, I have documented the plugins incuded and how I am using it to learn Neovim having mostly used traditional modern editors like VS Code and PyCharm. 
+
+## Credit
+
+All credit for this setup goes to [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim.git) and [kickstart-modular](https://github.com/dam9000/kickstart-modular.nvim.git). I preferred the modular version but they are both the same. 
+
+Adapting the kickstart is itself a great way to learn Neovim so if you like the additional plugins I would recommend manually updating the original kickstart rather than just forking this repo.
+
+## Resources
+
+* [The kickstart video](https://www.youtube.com/watch?v=m8C0Cq9Uv9o) is a great resource to walk you through it.
+* [TJ's channel](https://www.youtube.com/@teej_dv) has loads of great content to help learn your way around Neovim.
+* [Omer's channel](https://www.youtube.com/@devopstoolbox) has great intros and reviews to plugins.
+  * Omer's [dotfiles](https://github.com/omerxx/dotfiles.git) repo contains his [Neovim](https://github.com/omerxx/dotfiles/tree/master/nvim) setup and is where I saw a lot of the plusings I have added.
+
+## Plugins
+
+Each plugin is classified as one of:
+
+* **Setup** - general plugins to setup development environment.
+* **Workflow** - tools to improve productivity.
+* **Learning** - tools to support Neovim best practice.
+* **Prettifier** - tools and extras to make Neovim look cool and potentially more familiar for those coming from a VS Code-style editor.
+
+* [lazy](https://github.com/folke/lazy.nvim) - plugin manager. 
+  * **Setup** - there are a few plugin managers, this one comes with the quickstart and has a cool UI.
+* [treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file) - advanced syntax highlighting.
+  * **Setup** - provides much more the standard.
+* [lspconfig](https://github.com/neovim/nvim-lspconfig) - languange server support.
+  * **Setup**
+* [cmp](https://github.com/hrsh7th/nvim-cmp) - autocompletion plugin.
+  * **Setup**
+* [telescope](https://github.com/nvim-telescope/telescope.nvim) - menu visualization tool.
+  * **Workflow** - borderline essential workflow tool integrated into many other plugins. 
+* [conform](https://github.com/stevearc/conform.nvim) - code formatter.
+  * **Workflow**
+* [which-key](https://github.com/folke/which-key.nvim) - keymap viewer.
+  * **Learning**
+* [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) - file tree viewer.
+  * **Prettifier** - I do not think this qualifies as a workflow tool in Neovim - learn Telescope and file commands instead.
+* [noice](https://github.com/folke/noice.nvim)
+  * **Prettifier** - makes Neovim look awesome.
+* [hardtime](https://github.com/m4xshen/hardtime.nvim)
+  * **Learning** - great tool to encourage better use of Vim motions.
+* [precognition](https://github.com/tris203/precognition.nvim)
+  * **Learning** - another great supplement to hardtime to help learn Vim motions.
+* [neoclip](https://github.com/AckslD/nvim-neoclip.lua)
+  * **Workflow** - there might be Vim native ways to manage the clipboard but this is a great solution using Telescope.
+* [gitsigns](https://github.com/lewis6991/gitsigns.nvim) - fine grained git controls.
+  * **Worflow** - this is an amazing git interface for fine grained hunk controls.
+* [neogit](https://github.com/NeogitOrg/neogit) - git user interface
+  * **Prettifier** - [fugitive](https://github.com/tpope/vim-fugitive) seems to be the standard standard git plugin but I like this UI.
+* [git-blame](https://github.com/f-person/git-blame.nvim) - show git blame as virtual text.
+* [tokyonight](https://github.com/folke/tokyonight.nvim) - color theme.
+  * **Prettifier**
+* [lualine](https://github.com/nvim-lualine/lualine.nvim) - status line
+  * **Prettifier** - adds a useful statusline to the bottom of Neovim.
+* [mini](https://github.com/echasnovski/mini.nvim) - multi plugin tool. 
+  * **Workflow** - `ai` and `surround` plugins for inside/around and bracket control.
+* [todo-comments](https://github.com/folke/todo-comments.nvim) - highlight ToDo comments.
+  * **Prettifier**
+* [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) - really cool markdown renderer.
+  * **Workflow** - for me, nice markdown rendering is critical, so this is more than prettification.
+* [nvim-spectre](https://github.com/nvim-pack/nvim-spectre) - find and replace tool.
+  * **Prettifier** - adds a useful user interface to help find and replace but no substitute for the vim motions.
+
+* [autopairs](https://github.com/windwp/nvim-autopairs)
+* [black](https://github.com/averms/black-nvim)
+* [nvim-dap](https://github.com/mfussenegger/nvim-dap)
+* [isort](https://github.com/stsewd/isort.nvim)
+* [lint](https://github.com/mfussenegger/nvim-lint)
+* [neotest](https://github.com/nvim-neotest/neotest)
+* [obsidian](https://github.com/epwalsh/obsidian.nvim)
+
+---
+
 # kickstart-modular.nvim
 
 ## Introduction
