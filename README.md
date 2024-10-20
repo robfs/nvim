@@ -63,44 +63,15 @@ Each plugin is classified as one of:
 * [nvim-dap](https://github.com/mfussenegger/nvim-dap)
 * [isort](https://github.com/stsewd/isort.nvim)
 * [lint](https://github.com/mfussenegger/nvim-lint)
-* [mini]
-* [todo-comments]
+* [mini](https://github.com/echasnovski/mini.nvim) - multi plugin tool. 
+  * **Workflow** - `ai` and `surround` plugins for inside/around and bracket control.
+* [todo-comments](https://github.com/folke/todo-comments.nvim) - highlight ToDo comments.
+  * **Prettifier**
 
-* [neotest]
+* [neotest](https://github.com/nvim-neotest/neotest)
 * [nvim-spectre]
 * [obsidian]
 * [render-markdown]
-
-### Lazy
-### Treesitter
-### LSPConfig
-### Telescope
-### Autopairs
-### Black
-### CMP
-### Conform
-### Debug
-### GitSigns
-### Indent Line
-### iSort
-### Lint
-### Mini
-### Neo-tree
-### ToDo Comments
-### TokyoNight
-### Which-key
-
-### Git-blame
-### Hardtime
-### Neoclip
-### Neogit
-### Neotest
-### Noice
-### Nvim-Spectre
-### Obsidian
-### Precognition
-### Render Markdown
-
 
 ---
 
