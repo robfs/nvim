@@ -63,5 +63,5 @@ end, { desc = '[F]ind current word' })
 vim.keymap.set('n', '<leader>fp', spectre.open_file_search, { desc = '[F]ind in current file' })
 
 -- Keymaps for neoclip
-vim.keymap.set({ 'n', 'v' }, '<C-v>', ':Telescope neogit<CR>')
+vim.keymap.set({ 'n', 'v' }, '<C-v>', ':Telescope neoclip<CR>')
 -- vim: ts=2 sts=2 sw=2 et
