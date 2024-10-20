@@ -57,21 +57,24 @@ Each plugin is classified as one of:
 * [git-blame](https://github.com/f-person/git-blame.nvim) - show git blame as virtual text.
 * [tokyonight](https://github.com/folke/tokyonight.nvim) - color theme.
   * **Prettifier**
+* [lualine](https://github.com/nvim-lualine/lualine.nvim) - status line
+  * **Prettifier** - adds a useful statusline to the bottom of Neovim.
+* [mini](https://github.com/echasnovski/mini.nvim) - multi plugin tool. 
+  * **Workflow** - `ai` and `surround` plugins for inside/around and bracket control.
+* [todo-comments](https://github.com/folke/todo-comments.nvim) - highlight ToDo comments.
+  * **Prettifier**
+* [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) - really cool markdown renderer.
+  * **Workflow** - for me, nice markdown rendering is critical, so this is more than prettification.
+* [nvim-spectre](https://github.com/nvim-pack/nvim-spectre) - find and replace tool.
+  * **Prettifier** - adds a useful user interface to help find and replace but no substitute for the vim motions.
 
 * [autopairs](https://github.com/windwp/nvim-autopairs)
 * [black](https://github.com/averms/black-nvim)
 * [nvim-dap](https://github.com/mfussenegger/nvim-dap)
 * [isort](https://github.com/stsewd/isort.nvim)
 * [lint](https://github.com/mfussenegger/nvim-lint)
-* [mini](https://github.com/echasnovski/mini.nvim) - multi plugin tool. 
-  * **Workflow** - `ai` and `surround` plugins for inside/around and bracket control.
-* [todo-comments](https://github.com/folke/todo-comments.nvim) - highlight ToDo comments.
-  * **Prettifier**
-
 * [neotest](https://github.com/nvim-neotest/neotest)
-* [nvim-spectre]
-* [obsidian]
-* [render-markdown]
+* [obsidian](https://github.com/epwalsh/obsidian.nvim)
 
 ---
 
