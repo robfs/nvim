@@ -8,7 +8,7 @@ return {
       lint.linters_by_ft = {
         -- markdown = { 'markdownlint' },
         python = {
-          'flake8',
+          -- 'flake8',
           'mypy',
           -- 'pylint',
         },
