@@ -1,24 +1,42 @@
-local uv_run_file = function()
-  local path = vim.api.nvim_buf_get_name(0)
-  local cmd = "uv run " .. path
-  local opts = { win = { style = { border = "rounded" } }, auto_close = false }
-  require("snacks").terminal.open(cmd, opts)
+local terminal_opts = { win = { style = { border = 'rounded' } }, auto_close = false }
+
+local function uv_run_file(opts)
+  local path = opts.args
+  if path == nil or path == '' then
+    path = vim.api.nvim_buf_get_name(0)
+  end
+  local cmd = 'uv run ' .. path
+  require('snacks').terminal.open(cmd, terminal_opts)
+end
+
+local function textual_run_file(opts)
+  local path = opts.args
+  if path == nil or path == '' then
+    path = vim.api.nvim_buf_get_name(0)
+  end
+  local cmd = 'uv run textual run --dev' .. path
+  require('snacks').terminal.open(cmd, terminal_opts)
+end
+
+local uv_run_selection = function()
+  -- yank selection to register v
+  vim.cmd 'normal! "vy'
+  local cmd = "uv run python -c '" .. vim.fn.getreg 'v' .. "'"
+  require('snacks').terminal.open(cmd, terminal_opts)
 end
 
 local textual_colors = function()
-  local cmd = "uv run textual colors"
-  local opts = { win = { style = { border = "rounded" } }, auto_close = false }
-  require("snacks").terminal.open(cmd, opts)
+  local cmd = 'uv run textual colors'
+  require('snacks').terminal.open(cmd, terminal_opts)
 end
 
-local textual_run = function()
-  local path = vim.api.nvim_buf_get_name(0)
-  local cmd = "uv run textual --dev " .. path
-  local opts = { win = { style = { border = "rounded" } }, auto_close = false }
-  require("snacks").terminal.open(cmd, opts)
-end
+-- User commands to run python files
+vim.api.nvim_create_user_command('UVRunFile', uv_run_file, { nargs = '?', complete = 'file' })
+vim.api.nvim_create_user_command('UVRunSelection', uv_run_selection, {})
+vim.api.nvim_create_user_command('TextualColors', textual_colors, {})
+vim.api.nvim_create_user_command('TextualRunDev', textual_run_file, {})
 
-vim.api.nvim_create_user_command("UVRunFile", uv_run_file, {})
-vim.api.nvim_create_user_command("TextualColors", textual_colors, {})
-vim.keymap.set("n", "<leader>fe", "<cmd>UVRunFile<CR>", { desc = "Execute in terminal" })
-vim.keymap.set("n", "<leader>tr", "<cmd>UVRunFile<CR>", { desc = "Textual run (dev)" })
+-- Keymaps
+vim.keymap.set('n', '<leader>x', '<cmd>UVRunFile<CR>', { desc = 'UV run file' })
+vim.keymap.set('v', '<leader>x', '<cmd>UVRunSelection<CR>', { desc = 'UV run selection' })
+vim.keymap.set('n', '<leader>tr', '<cmd>TextualRunDev<CR>', { desc = 'Textual run (dev)' })
