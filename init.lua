@@ -1,12 +1,12 @@
-vim.g.mapleader = "space"
-vim.g.maplocalleader = "space"
+vim.g.mapleader = 'space'
+vim.g.maplocalleader = 'space'
 
-require("config.lazy")
-require("config.options")
-require("config.keymaps")
+require 'config.lazy'
+require 'config.options'
+require 'config.keymaps'
 
--- Sourcing keymaps.
-vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
+-- Sourcing keymap
+vim.keymap.set('n', '<leader><leader>x', '<cmd>source %<CR>')
 -- Highlight when yanking text
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking text.',
