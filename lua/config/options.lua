@@ -8,9 +8,5 @@ vim.opt.autoindent = true -- Copy indent from current line when starting a new l
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.o.scrolloff = 10
-
+vim.o.clipboard = 'unnamedplus'
 vim.g.python3_host_prog = '~/nvimvenv/.venv/bin/python'
-
-vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
-end)
