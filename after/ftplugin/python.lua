@@ -26,7 +26,7 @@ local function textual_run_file(opts)
   if path == nil or path == '' then
     path = vim.api.nvim_buf_get_name(0)
   end
-  local cmd = 'uv run textual run --dev' .. path
+  local cmd = 'uv run textual run --dev ' .. path
   require('snacks').terminal.open(cmd, terminal_opts)
 end
 
