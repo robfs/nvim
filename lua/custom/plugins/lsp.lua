@@ -5,7 +5,7 @@ return {
       { 'mason-org/mason.nvim', opts = {} },
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
-      { 'j-hui/fidget.nvim',    opts = {} },
+      { 'j-hui/fidget.nvim', opts = {} },
       'saghen/blink.cmp',
       {
         'folke/lazydev.nvim',
@@ -16,7 +16,7 @@ return {
             { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
           },
         },
-      }
+      },
     },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
@@ -158,8 +158,28 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        pyright = {},
-        ruff = {},
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+                diagnosticMode = 'workspace',
+              },
+            },
+          },
+        },
+        ruff = {
+          init_options = {
+            settings = {
+              args = {
+                '--line-length=88',
+                '--select=E,W,F,B,I',
+                '--fix',
+              },
+            },
+          },
+        },
         lua_ls = {
           settings = {
             Lua = {
@@ -174,6 +194,8 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'ruff', -- Python formatter and linter
+        'pyright', -- Python language server
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -192,4 +214,5 @@ return {
         },
       }
     end,
-  }, }
+  },
+}

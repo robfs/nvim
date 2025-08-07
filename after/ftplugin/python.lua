@@ -1,3 +1,15 @@
+-- Python-specific settings
+vim.opt_local.tabstop = 4
+vim.opt_local.shiftwidth = 4
+vim.opt_local.expandtab = true
+vim.opt_local.autoindent = true
+vim.opt_local.smartindent = true
+vim.opt_local.textwidth = 88 -- PEP 8 recommends 79, but many use 88 for black compatibility
+vim.opt_local.colorcolumn = '88'
+
+-- Enable treesitter-based indentation for Python
+vim.opt_local.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
 local terminal_opts = { win = { style = { border = 'rounded' } }, auto_close = false }
 
 local function uv_run_file(opts)
