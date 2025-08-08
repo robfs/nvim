@@ -1,6 +1,21 @@
 vim.g.mapleader = 'space'
 vim.g.maplocalleader = 'space'
 
+if vim.fn.executable 'wl-copy' == 1 and vim.fn.executable 'wl-paste' == 1 then
+  vim.g.clipboard = {
+    name = 'wl-clipboard',
+    copy = {
+      ['+'] = 'wl-copy',
+      ['*'] = 'wl-copy --primary',
+    },
+    paste = {
+      ['+'] = 'wl-paste --no-newline',
+      ['*'] = 'wl-paste --no-newline --primary',
+    },
+    cache_enabled = 0,
+  }
+end
+
 require 'config.lazy'
 require 'config.options'
 require 'config.keymaps'
