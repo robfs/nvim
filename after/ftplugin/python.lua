@@ -46,9 +46,9 @@ end
 vim.api.nvim_create_user_command('UVRunFile', uv_run_file, { nargs = '?', complete = 'file' })
 vim.api.nvim_create_user_command('UVRunSelection', uv_run_selection, {})
 vim.api.nvim_create_user_command('TextualColors', textual_colors, {})
-vim.api.nvim_create_user_command('TextualRunDev', textual_run_file, {})
+vim.api.nvim_create_user_command('TextualRunDev', textual_run_file, { nargs = '?', complete = 'file' })
 
 -- Keymaps
 vim.keymap.set('n', '<leader>x', '<cmd>UVRunFile<CR>', { desc = 'UV run file' })
 vim.keymap.set('v', '<leader>x', '<cmd>UVRunSelection<CR>', { desc = 'UV run selection' })
-vim.keymap.set('n', '<leader>tr', '<cmd>TextualRunDev<CR>', { desc = 'Textual run (dev)' })
+vim.keymap.set('n', '<leader>ta', '<cmd>TextualRunDev app.py<CR>', { desc = 'Textual run app.py' })
