@@ -23,6 +23,7 @@ require 'config.keymaps'
 
 -- Sourcing keymap
 vim.keymap.set('n', '<leader><leader>x', '<cmd>source %<CR>')
+vim.keymap.set('n', '-', '<cmd>Oil<CR>', {})
 -- Highlight when yanking text
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking text.',
