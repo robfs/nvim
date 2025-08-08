@@ -9,4 +9,3 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.o.scrolloff = 10
 vim.o.clipboard = 'unnamedplus'
-vim.g.python3_host_prog = '~/nvimvenv/.venv/bin/python'

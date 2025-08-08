@@ -1,5 +1,6 @@
 vim.g.mapleader = 'space'
 vim.g.maplocalleader = 'space'
+vim.g.python3_host_prog = '~/nvimvenv/.venv/bin/python'
 
 if vim.fn.executable 'wl-copy' == 1 and vim.fn.executable 'wl-paste' == 1 then
   vim.g.clipboard = {
