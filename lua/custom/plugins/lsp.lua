@@ -158,7 +158,7 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        pyright = {
+        basedpyright = {
           settings = {
             python = {
               analysis = {
@@ -195,7 +195,7 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'ruff', -- Python formatter and linter
-        'pyright', -- Python language server
+        'basedpyright', -- Python language server
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
