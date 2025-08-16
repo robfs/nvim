@@ -3,6 +3,10 @@ return {
   ---@module 'obsidian'
   ---@type obsidian.config
   opts = {
+    event = {
+      'BufReadPre $VAULT/*.md',
+      'BufNewFile $VAULT/*.md',
+    },
     workspaces = {
       { name = 'personal', path = os.getenv 'VAULT' or vim.fn.expand '~/vault' },
     },
