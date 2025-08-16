@@ -1,12 +1,15 @@
 return {
   'obsidian-nvim/obsidian.nvim',
+  version = '*', -- recommended, use latest release instead of latest commit
+  lazy = true,
+  ft = 'markdown',
+  -- event = {
+  --   'BufReadPre $VAULT/*.md',
+  --   'BufNewFile $VAULT/*.md',
+  -- },
   ---@module 'obsidian'
   ---@type obsidian.config
   opts = {
-    event = {
-      'BufReadPre $VAULT/*.md',
-      'BufNewFile $VAULT/*.md',
-    },
     workspaces = {
       { name = 'personal', path = os.getenv 'VAULT' or vim.fn.expand '~/vault' },
     },
