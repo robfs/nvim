@@ -9,3 +9,5 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.o.scrolloff = 10
 vim.o.clipboard = 'unnamedplus'
+
+vim.cmd.colorscheme 'catppuccin-macchiato'
